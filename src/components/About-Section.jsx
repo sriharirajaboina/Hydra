@@ -3,42 +3,47 @@ import hydravr from "../assets/About/hydraVr.png"
 const About=()=>{
     return (
         <>
-            <div>
-                <div>
-                    <div>
+            <div className="mt-20 mx-21">
+                <div className="flex items-center justify-between">
+                    <div className="flex items-center">
                         <h2>
-                            INTRODUCTION<br/>
-                            TO HYDRA VR
+                            <span className="font-bold text-[#ffffff] text-4xl">
+                                INTRODUCTION</span><br/>
+                            <span className="font-light text-[#ffffff] text-4xl font-[300]">TO HYDRA VR</span>
                         </h2>
-                        <span>&#8594;</span>
+                        <span className="ml-15 text-[#ffffff] text-5xl mt-10">&#8594;</span>
                     </div>
-                    <div>
-                        <img src={hydravr} alt="hydrave"/>
-                    </div>
-                </div>
-                <div>
-                    <div>
-                        <p>Vitae sapien pellentesque habitant morbi tristique senectus et netus et. Feugiat 
+                    <div className="w-[43%]">
+                        <p className="text-[#ffffff] text-base">
+                            Vitae sapien pellentesque habitant morbi tristique senectus et netus et. Feugiat 
                             nibh sed pulvinar proin gravida hendrerit lectus. Mi sit amet mauris commodo 
                             quis imperdiet massa tincidunt nunc. Viverra aliquet eget sit amet tellus. Ornare 
                             lectus sit amet est placerat in. Lectus magna fringilla urna porttitor rhoncus vitae.
                         </p>
-                    </div>
+                    </div>  
+                </div>
+                <div className="flex items-center justify-between mt-20">
                     <div>
-                        <h2>ABOUT
+                        <img src={hydravr} alt="hydrave" className="w-130 h-140 rounded-tl-[240px] rounded-tr-[100px]
+                        rounded-br-[240px] rounded-bl-[100px]"/>
+                    </div>
+                    <div className="w-[43%]">
+                        <h2 className="mb-8">
+                            <span className="font-bold text-[#ffffff] text-4xl">ABOUT</span>
                             <br/>
-                            <span>HYDRA VR</span>
+                            <span className="font-light text-[#ffffff] text-4xl font-[300]">HYDRA VR</span>
                         </h2>
-                        <p>Eget mi proin sed libero enim sed faucibus turpis. Nisl rhoncus mattis rhoncus 
+                        <p className="text-[#ffffff] text-base">Eget mi proin sed libero enim sed faucibus turpis. Nisl rhoncus mattis rhoncus 
                             urna neque viverra justo. Vivamus at augue eget arcu dictum. Ultrices gravida 
                             dictum fusce ut placerat orci. Aenean et tortor at risus viverra adipiscing at in. 
-                            Mattis aliquam faucibus purus in massa. Est placerat in egestas erat imperdietsed.
-                            Consequat semper viverra nam libero justo laoreet sit amet. Aliquametiam 
-                            erat velit scelerisque in dictum non consectetur a. Laoreet sit amet 
-                            cursus sit amet. Vel eros donec ac odio tempor orci dapibus. Sem nulla pharetra 
-                            diam sit amet nisl suscipit adipiscing bibendum. Leo a diam sollicitudin tempor.
+                            Mattis aliquam faucibus purus in massa. Est placerat in egestas erat imperdiet 
+                            sed. Consequat semper viverra nam libero justo laoreet sit amet. Aliquam
+                            etiam erat velit scelerisque in dictum non consectetur a. Laoreet sit amet 
+                            cursus sit amet. Vel eros donec ac odio tempor orci dapibus. Sem nulla phar
+                            etradiam sit amet nisl suscipit adipiscing bibendum. Leo a diam sollicitudi  
+                            n tempor.
                         </p>
-                        <button>
+                        <button className="mt-10 font-bold px-8 py-3 bg-gradient-to-r from-[#8176AF] to-[#C0B7E8] rounded-full">
                             LET"S GET IN TOUCH
                         </button>
                     </div>
