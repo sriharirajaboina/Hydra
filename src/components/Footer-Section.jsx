@@ -9,13 +9,11 @@ import pinterest from "../assets/Footer/pinterest.png"
 const Footer=()=>{
     return(
         <>
-            <div>
-                <div>
-                    <div>
-                        <img src={logo} alt="logo"/>
-                    </div>
-                    <div>
-                        <ul>
+            <div className="mt-20 mx-21">
+                <div className="flex justify-between py-10">
+                        <img src={logo} alt="logo" className="w-41 h-42"/>
+                    <div className="text-[#ffffff]">
+                        <ul className="font-bold space-y-5">
                             <li>ABOUT</li>
                             <li>SERVICES</li>
                             <li>TECHNOLOGIES</li>
@@ -23,28 +21,34 @@ const Footer=()=>{
                             <li>JOIN HYDRA</li>
                         </ul>
                     </div>
-                    <div>
-                        <ul>
+                    <div className="text-[#ffffff]">
+                        <ul className="font-bold space-y-5">
                             <li>F.A.Q</li>
                             <li>SITEMAP</li>
                             <li>CONDITIONS</li>
                             <li>LICENSES</li>
                         </ul>
                     </div>
-                    <div>
-                        <h3>SOCIALIZE WITH HYDRA</h3>
-                        <div>
-                            <img src={facebok} alt="facebok"/>
-                            <img src={twitter} alt="twitter"/>
-                            <img src={linkedin} alt="linkedin"/>
-                            <img src={youtube} alt="youtube"/>
-                            <img src={instagram} alt="insta"/>
-                            <img src={pinterest} alt="pinterest"/>
+                    <div className="text-[#ffffff] ">
+                        <h3 className="font-bold">
+                            SOCIALIZE WITH HYDRA</h3>
+                        <div className="mt-6 flex space-x-4">
+                            <img src={facebok} alt="facebok" className="w-8 h-8"/>
+                            <img src={twitter} alt="twitter" className="w-8 h-8"/>
+                            <img src={linkedin} alt="linkedin" className="w-8 h-8"/>
+                            <img src={youtube} alt="youtube" className="w-8 h-8"/>
+                            <img src={instagram} alt="insta" className="w-8 h-8"/>
+                            <img src={pinterest} alt="pinterest" className="w-8 h-8"/>
                         </div>
+                        <button className="mt-8 px-8 py-3 bg-gradient-to-r from-[#8176AF] to-[#C0B7E8]
+                        rounded-full text-[#343045] text-xs font-bold">
+                            BUILD YOUR WORLD</button>
                     </div>
                 </div>
-                <div>
-                    <h3>
+                <div className="relative">
+                    <div className="absolute w-full h-1 
+                    bg-gradient-to-r from-[#343045] via-[#C0B7E8] via-[#8176AF] to-[#343045]"></div>
+                    <h3 className="text-[#ffffff] text-center py-10 font-bold">
                         2023 © HYDRA LANDING PAGE - BY ZINE. E. FALOUTI - ALL RIGHTS RESERVED 
                     </h3>
                 </div>
