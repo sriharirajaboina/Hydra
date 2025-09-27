@@ -34,7 +34,7 @@ const Hero=()=>{
                 setCurrentIndex(currentIndex-1);
             }
         };
-        const handleNexr=()=>{
+        const handleNext=()=>{
             if(currentIndex<contactItems.length-1){
                 setCurrentIndex(currentIndex+1)
             }
@@ -96,12 +96,13 @@ const Hero=()=>{
                         </div>
                     </div>
                     <div className="ml-5 mb-10 md:ml-5">
-                        <img src={vr} alt="Vr-img" className="w-150 h-115 
+                        <img src={vr} alt="Vr-img" className="w-full h-auto 
+                        max-w-sm md:max-w-xl 
                         rounded-tl-[100px] rounded-tr-[100px] rounded-br-[100px] rounded-bl-[240px]
                         "/>
                     </div>
                 </div>
-                <div className="mt-20 px-6 py-10 flex items-center justify-between 
+                <div className="mt-20 px-8 py-10 flex items-center justify-between 
                         bg-[radial-gradient(circle,_#3A3456F2_0%,_#211E2E_95%)] rounded-full">
                     <div className="relative md:hidden overflow-hidden">
                         <div
@@ -110,7 +111,7 @@ const Hero=()=>{
                         style={{transform:`translateX(-${currentIndex*100}%)`}}>
                         {contactItems.map((item,id)=>(
                             <div key={id}
-                            className="flex-shrink-0 w-full flex items-center">
+                            className="flex-shrink-0 w-full flex items-center ml-15">
                                 <img src={item.icon} alt="icon"
                                 className="w-12 h-12"/>
                                 <div className="ml-5 text-[#ffffff]">
@@ -125,13 +126,36 @@ const Hero=()=>{
                             </div>
                         ))}
                         </div>
+                        <button
+                            onClick={handlePrev}
+                            className="absolute left-1 top-1/2 -translate-y-1/2 text-[#ffffff] w-8 h-8
+                            flex items-center justify-center p-2
+                            bg-transparent border-3 border-[#ffffff] rounded-full cursor-pointer ">
+                            <span className="text-5xl leading-none mb-3"> ‹</span>
+                        </button>
+                        <button
+                            onClick={handleNext}
+                            className="absolute right-1 top-1/2 -translate-y-1/2 w-8 h-8 cursor-pointer
+                            flex items-center justify-center p-2
+                            bg-transparent border-3 border-[#ffffff] text-[#ffffff] rounded-full">
+                               <span className="text-5xl mb-3"> ›</span>
+                        </button>
                     </div>
-                    <button
-                        onClick={handlePrev}
-                        className="absolute right-2 top-1/2 -translate-y-1/2 text-[#ffffff]
-                        bg-white rounded-full p-2">
-                              ‹
-                    </button>
+                    <div className="hidden md:flex justify-around items-center
+                    w-full text-[#ffffff]">
+                        {contactItems.map((item,id)=>(
+                            <div 
+                            key={id}
+                            className="flex items-center space-x-6 p-4">
+                                <img src={item.icon} alt="icon-des"
+                                className="w-12 h-12"/>
+                                <div>
+                                    <h3 className="font-bold text-lg">{item.title}</h3>
+                                    <p className="lg:text-sm xl:text-base font-[300]" >{item.description}</p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </div>
         </>
