@@ -66,7 +66,7 @@ const Service =()=>{
                             </p>
                         </div>
                     </div>
-                    <div className="mt-20 flex  justify-between"> 
+                    <div className="mt-5 flex  justify-between"> 
                         <div className="md:hidden relative w-full flex justify-center mt-8">
                             <button
                              onClick={handlePrev}
@@ -87,7 +87,7 @@ const Service =()=>{
                                     {Services[currentSlide].description}
                                 </p>
                                 <button className="mt-4 bg-gradient-to-r from-[#8176AF] to-[#C0B7E8]
-                                rounded-full px-15 py-3 text-[#343045] text-base font-bold">
+                                rounded-full px-10 py-3 text-[#343045] text-base font-bold">
                                     {Services[currentSlide].button}
                                 </button>
                             </div>

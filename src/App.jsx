@@ -13,7 +13,7 @@ function App() {
 
   return (
     <>
-      <div classsName="w-full">
+      <div classsName="w-full overflow-hidden">
         <HeroSection/>
         <AboutSection/>
         <ServiceSection/>

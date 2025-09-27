@@ -71,22 +71,21 @@ const Hero=()=>{
         </div>
             <div className="mt-10 mx-10 lg:mx-21 mt-25">
                 <div className="flex flex-col-reverse md:flex-row items-center justify-between">
-                    <div className="text-6xl md:text-4xl">
-                        <h2 className="text-[40px] font-bold mb-6 
-                            text-[#ffffff]">
-                           <span className="text-5xl
-                                bg-gradient-to-r from-[#8176AF] to-[#C0B7E8] bg-clip-text text-transparent"
-                           >Dive </span> Into The Depths<br/> Of 
-                            <span className="text-5xl
-                                bg-gradient-to-r from-[#8176AF] to-[#C0B7E8] bg-clip-text text-transparent
-                            "> Virtual Reality</span>
+                    <div className=" md:text-4xl">
+                        <h2 className="text-[30px] font-bold mb-6 
+                            text-[#ffffff] md:text-[40px]">
+                           <span className="text-3xl bg-gradient-to-r from-[#8176AF] to-[#C0B7E8] 
+                           bg-clip-text text-transparent md:text-5xl"
+                           >Dive </span> Into The Depths<br/> Of  
+                            <span className="text-3xl bg-gradient-to-r from-[#8176AF] to-[#C0B7E8] 
+                            bg-clip-text text-transparent md:text-5xl"> Virtual Reality </span>
                         </h2>
                         <p className="hidden md:flex text-[#ffffff] md:w-[80%] xl:w-[58%] text-base ">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                             sed do eiusmod tempor incididunt ut labore et dolore 
                             nisl tincidunt eget. Lectus mauris eros in vitae .</p>
                         <div className="mt-10 flex items-center">
-                            <button className=" px-25 py-4 bg-gradient-to-r from-[#8176AF] to-[#C0B7E8]
+                            <button className=" px-18 py-4 bg-gradient-to-r from-[#8176AF] to-[#C0B7E8]
                             rounded-full font-bold text-[#343045] text-xs
                             md:px-10 py-3 bg-gradient-to-r from-[#8176AF] to-[#C0B7E8]
                             rounded-full font-bold text-[#343045] text-xs">
@@ -118,7 +117,7 @@ const Hero=()=>{
                                     <h3 className="font-bold  text-lg">
                                         {item.title}
                                     </h3>
-                                    <p className="text-base font-[300] ">
+                                    <p className="w-[60%] text-sm font-[300] sm:w-full">
                                         {item.description}
                                     </p>
                                 </div>
@@ -136,7 +135,7 @@ const Hero=()=>{
                         <button
                             onClick={handleNext}
                             className="absolute right-1 top-1/2 -translate-y-1/2 w-8 h-8 cursor-pointer
-                            flex items-center justify-center p-2
+                            flex items-center justify-center p-2 mx-1 
                             bg-transparent border-3 border-[#ffffff] text-[#ffffff] rounded-full">
                                <span className="text-5xl mb-3"> ›</span>
                         </button>

@@ -10,6 +10,7 @@ const Tech=()=>{
     const [techSlide,setTechSlide]=useState(0)
 
     const Technologies=[unreal,unity,oculus,vive]
+    const Technologie=[vive,unity,oculus,unreal]
 
     const techhandlePrev=()=>{
         if(techSlide > 0){
@@ -52,7 +53,7 @@ const Tech=()=>{
                     <span className="mt-[-14px] text-6xl">&#8249;</span>
                 </button>
                 <img 
-                src={Technologies[techSlide]}
+                src={Technologie[techSlide]}
                 alt="tech-img"
                 className="w-52 h-52 object-contain"/>
                 <button 

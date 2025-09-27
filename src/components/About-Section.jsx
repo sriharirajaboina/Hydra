@@ -29,7 +29,7 @@ const About=()=>{
                         max-w-sm md:max-w-lg rounded-tl-[240px] rounded-tr-[100px]
                         rounded-br-[240px] rounded-bl-[100px]"/>
                     </div>
-                    <div className="w-full md:w-[43%] md:text-left md:ml-10">
+                    <div className="w-full md:w-[43%] md:text-left md:ml-10 ">
                         <h2 className="md:mb-8">
                             <span className="hidden md:flex font-bold text-[#ffffff] text-4xl">ABOUT</span>
                             <br/>
@@ -45,9 +45,11 @@ const About=()=>{
                             etradiam sit amet nisl suscipit adipiscing bibendum. Leo a diam sollicitudi  
                             n tempor.
                         </p>
-                        <button className="mt-10 font-bold px-8 py-3 bg-gradient-to-r from-[#8176AF] to-[#C0B7E8] rounded-full">
-                            LET"S GET IN TOUCH
-                        </button>
+                        <div className="text-center">
+                            <button className="mt-10 font-bold px-8 py-3 bg-gradient-to-r from-[#8176AF] to-[#C0B7E8] rounded-full">
+                                LET"S GET IN TOUCH
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>

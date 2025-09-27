@@ -50,7 +50,7 @@ const Footer=()=>{
                 <div className="relative">
                     <div className="absolute w-full h-1 
                     bg-gradient-to-r from-[#343045] via-[#C0B7E8] via-[#8176AF] to-[#343045]"></div>
-                    <h3 className="leading-loose text-[#ffffff] text-center py-10 font-bold">
+                    <h3 className="w-[80%] leading-loose tracking-wider text-[#ffffff] text-center py-10 font-bold md:w-full">
                         2023 © HYDRA LANDING PAGE - BY ZINE. E. FALOUTI - ALL RIGHTS RESERVED 
                     </h3>
                 </div>
