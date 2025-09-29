@@ -1,4 +1,5 @@
 import React,{useState, useRef} from "react";
+import {motion} from "framer-motion"
 import logo from "../assets/Hero/logo.png"
 import brand from "../assets/Hero/brand.png"
 import vr from "../assets/Hero/VR.png"
@@ -42,68 +43,126 @@ const Hero=()=>{
     return(
         <>
         <div className="mt-13 mx-10 lg:mt-13 lg:mx-21">
-          <nav className="flex justify-between items-center">
-            <div className="flex justify-between items-center ">
+          <motion.nav 
+            initial={{y:-50,opacity:0}}
+            whileInView={{y:0,opacity:1}}
+            transition={{duration:0.6,ease:"easeOut"}}
+            className="flex justify-between items-center">
+            <motion.div 
+             initial={{opacity:0,x:-50}}
+             whileInView={{opacity:1,x:0}}
+             transition={{duration:0.8}}
+             className="flex justify-between items-center ">
                 <img src={logo} alt="hydra-logo" className="w-25 h-25"/>
                 <img src={brand} alt="brand-img" className="w-19 h-12 ml-4"/>
-            </div>
+            </motion.div>
             <div >
                 <ul className="hidden xl:flex justify-between text-white font-bold
-                space-x-10 font-montserrat">
-                    <li >ABOUT</li>
-                    <li >SERVICE</li>
-                    <li >TECHNOLOGIES</li>
-                    <li >HOW TO</li>
+                space-x-10 font-montserrat cursor-pointer">
+                    {["ABOUT","Service","TECHNOLOGIES","HOW TO"].map((item,i)=>(
+                        <motion.li
+                         key={i}
+                         initial={{opacity:0,y:-30}}
+                         whileInView={{opacity:1,y:0}}
+                         transition={{type: "tween",duration:1,delay:i*0.2}}
+                         whileHover={{scale:1.1,color:"#c0b7e8"}}>
+                            {item}
+                        </motion.li>
+                    ))}
                 </ul>
             </div>
+
             <div className="hidden xl:flex font-montserrat text-white font-bold space-x-5">
-                <button className="border-1 px-6 py-3 rounded-full">
-                    CONTACT US</button>
-                <button className="px-6 py-3 rounded-full text-black"
+                <motion.button 
+                 whileHover={{scale:1.1}}
+                 className="border-1 px-6 py-3 rounded-full ">
+                    CONTACT US
+                </motion.button>
+                <motion.button 
+                 whileHover={{scale:1.1,boxshadow:"0px 0px 15px #8176af"}}
+                 className="px-6 py-3 rounded-full text-black"
                  style={{ background: 'linear-gradient(to right, #8176AF, #C0B7E8)' }}>
-                    JOIN HYDRA</button>
+                    JOIN HYDRA
+                </motion.button>
             </div>
-            <div className="xl:hidden">
+            <motion.div
+             initial={{opacity:0,x:30}}
+             whileInView={{opacity:1,x:0}}
+             transition={{duration:0.6}} 
+             className="xl:hidden">
                 <img src={menu} alt="menu" className="w-10 h-10"
                 />
-            </div>
-            </nav> 
+            </motion.div>
+            </motion.nav> 
         </div>
             <div className="mt-10 mx-10 lg:mx-21 mt-25">
                 <div className="flex flex-col-reverse md:flex-row items-center justify-between">
-                    <div className=" md:text-4xl">
-                        <h2 className="text-[30px] font-bold mb-6 
+                    <motion.div 
+                     
+                     className=" md:text-4xl">
+                        <motion.h2 
+                          initial={{opacity:0,x:-60}}
+                          whileInView={{opacity:1,x:0}}
+                          transition={{duration:0.6}}
+                          className="text-[30px] font-bold mb-6 
                             text-[#ffffff] md:text-[40px]">
                            <span className="text-3xl bg-gradient-to-r from-[#8176AF] to-[#C0B7E8] 
                            bg-clip-text text-transparent md:text-5xl"
                            >Dive </span> Into The Depths<br/> Of  
                             <span className="text-3xl bg-gradient-to-r from-[#8176AF] to-[#C0B7E8] 
                             bg-clip-text text-transparent md:text-5xl"> Virtual Reality </span>
-                        </h2>
-                        <p className="hidden md:flex text-[#ffffff] md:w-[80%] xl:w-[58%] text-base ">
+                        </motion.h2>
+                        <motion.p 
+                          initial={{opacity:0,x:-60}}
+                          whileInView={{opacity:1,x:0}}
+                          transition={{duration:1}}
+                          className="hidden md:flex text-[#ffffff] md:w-[80%] xl:w-[58%] text-base ">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                             sed do eiusmod tempor incididunt ut labore et dolore 
-                            nisl tincidunt eget. Lectus mauris eros in vitae .</p>
-                        <div className="mt-10 flex items-center">
+                            nisl tincidunt eget. Lectus mauris eros in vitae .
+                        </motion.p>
+                        <motion.div 
+                          initial={{opacity:0,x:-60}}
+                          whileInView={{opacity:1,x:0}}
+                          transition={{duration:1.4}}
+                          whileHover={{scale:1.1}}
+                          className="mt-10 flex items-center">
                             <button className=" px-18 py-4 bg-gradient-to-r from-[#8176AF] to-[#C0B7E8]
-                            rounded-full font-bold text-[#343045] text-xs
-                            md:px-10 py-3 bg-gradient-to-r from-[#8176AF] to-[#C0B7E8]
-                            rounded-full font-bold text-[#343045] text-xs">
-                                BUILD YOUR WORLD</button>
-                            <img src={arrow} alt="arrow" 
-                            className="hidden md:flex ml-6 w-11 h-8"/>
-                        </div>
-                    </div>
-                    <div className="ml-5 mb-10 md:ml-5">
-                        <img src={vr} alt="Vr-img" className="w-full h-auto 
-                        max-w-sm md:max-w-xl 
-                        rounded-tl-[100px] rounded-tr-[100px] rounded-br-[100px] rounded-bl-[240px]
-                        "/>
-                    </div>
+                                rounded-full font-bold text-[#343045] text-xs
+                                md:px-10 py-3 bg-gradient-to-r from-[#8176AF] to-[#C0B7E8]
+                                rounded-full font-bold text-[#343045] text-xs">
+                                BUILD YOUR WORLD
+                            </button>
+                            <motion.img 
+                             src={arrow} alt="arrow" 
+                             className="hidden md:flex ml-6 w-11 h-8"
+                             animate={{x:[0,10,0]}}
+                             transition={{repeat:Infinity,duration:2}}/>
+                        </motion.div>
+                    </motion.div>
+                    <motion.div 
+                      initial={{scale:0.8,opacity:0}}
+                      animate={{scale:1,opacity:1}}
+                      transition={{type:"spring",stiffness:100,damping:20}}
+                      className="ml-5 mb-10 md:ml-5">
+                        <motion.img 
+                        src={vr} alt="Vr-img" 
+                        className="w-full h-auto max-w-sm md:max-w-xl 
+                        rounded-tl-[100px] rounded-tr-[100px] 
+                        rounded-br-[100px] rounded-bl-[240px]"
+                        animate={{y:[0,-50,0]}}
+                        transition={{repeat:Infinity,duration:4,ease:"easeInOut"}}
+                        />
+                    </motion.div>
                 </div>
                 <div className="mt-20 px-8 py-10 flex items-center justify-between 
                         bg-[radial-gradient(circle,_#3A3456F2_0%,_#211E2E_95%)] rounded-full">
-                    <div className="relative md:hidden overflow-hidden">
+                    <motion.div 
+                      initial={{opacity:0,scale:0.5}}
+                      whileInView={{opacity:1,scale:1}}
+                      transition={{duration:0.8}}
+                       viewport={{once:true,amount:0.7}}
+                      className="relative md:hidden overflow-hidden">
                         <div
                          ref={containerRef}
                         className="flex transition-transform duration-500"
@@ -139,20 +198,25 @@ const Hero=()=>{
                             bg-transparent border-3 border-[#ffffff] text-[#ffffff] rounded-full">
                                <span className="text-5xl mb-3"> ›</span>
                         </button>
-                    </div>
+                    </motion.div>
+
                     <div className="hidden md:flex justify-around items-center
-                    w-full text-[#ffffff]">
+                       w-full text-[#ffffff]">
                         {contactItems.map((item,id)=>(
-                            <div 
-                            key={id}
-                            className="flex items-center space-x-6 p-4">
+                            <motion.div 
+                              key={id}
+                              initial={{opacity:0,y:30}}
+                              whileInView={{opacity:1,y:0}}
+                              transition={{type:"tween",delay:id*0.3,duration:0.8}}
+                              viewport={{once:true,amount:0.5}}
+                              className="flex items-center space-x-6 p-4">
                                 <img src={item.icon} alt="icon-des"
                                 className="w-12 h-12"/>
                                 <div>
                                     <h3 className="font-bold text-lg">{item.title}</h3>
                                     <p className="lg:text-sm xl:text-base font-[300]" >{item.description}</p>
                                 </div>
-                            </div>
+                            </motion.div>
                         ))}
                     </div>
                 </div>
