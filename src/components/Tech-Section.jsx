@@ -53,7 +53,8 @@ const Tech=()=>{
                      transition={{type:"spring",stiffness:300}}
                      className="absolute left-1/2 bottom-0 transform -translate-x-1/2 
                      translate-y-1/2 w-9 h-9 flex items-center justify-center
-                     bg-gradient-to-r from -[#8176AF] to-[#C0B7E8] rounded-full mt-6 shadow-lg md:w-12 md:h-12">
+                     bg-gradient-to-r from -[#8176AF] to-[#C0B7E8] rounded-full 
+                     mt-6  outline outline-[8px] outline-[#0D0D0D66] md:w-12 md:h-12 ">
                          <img src={arrow} alt="techarrow" className="w-8 h-8"/>
                     </motion.button>
                 </div>
@@ -65,8 +66,8 @@ const Tech=()=>{
                  onClick={techhandlePrev}
                  className="w-12 h-12 flex item-center justify-center 
                  bg-gradient-to-r from-[#8176AF] to-[#C0B7E8] rounded-full 
-                 text-[#433D60] text-xl cursor-pointer ">
-                    <span className="mt-[-14px] text-6xl">&#8249;</span>
+                 text-[#433D60] text-xl cursor-pointer  outline outline-[8px] outline-[#0D0D0D66]">
+                    <span className="mt-[-12px] text-6xl">&#8249;</span>
                 </motion.button>
                 <AnimatePresence mode="wait">
                     <motion.img 
@@ -86,8 +87,8 @@ const Tech=()=>{
                  onClick={techhandleNext}
                  className="w-12 h-12 flex item-center justify-center 
                  bg-gradient-to-r from-[#8176AF] to-[#C0B7E8] rounded-full 
-                 text-[#433D60] text-xl cursor-pointer">
-                    <span className="mt-[-14px] text-6xl">&#8250;</span>
+                 text-[#433D60] text-xl cursor-pointer  outline outline-[8px] outline-[#0D0D0D66]">
+                    <span className="mt-[-12px] text-6xl">&#8250;</span>
                 </motion.button>
             </div>
             <div className="hidden md:flex items-center justify-between gap-8 mt-6 flex-wrap mx-25">

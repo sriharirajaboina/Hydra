@@ -60,9 +60,10 @@ const Process=()=>{
                     <div className="flex md:hidden item-center justify-center">
                         <button
                         onClick={handlePrev}
-                        className="absolute mt-15 mx-5 left-8 top-1/2  -translate-y-1/2 w-8 h-8 rounded-full
-                        bg-gradient-to-r from-[#8176AF] to-[#C0B7E8] flex items-center justify-center cursor-pointer">
-                            <span className="text-5xl mb-4">&#8249;</span>
+                        className="absolute mt-15 mx-5 left-8 top-1/2  -translate-y-1/2 w-10 h-10 rounded-full
+                        bg-gradient-to-r from-[#8176AF] to-[#C0B7E8] flex items-center justify-center cursor-pointer
+                        outline outline-[8px] outline-[#0D0D0D66]">
+                            <span className="text-5xl mb-2 text-[#343045]">&#8249;</span>
                         </button>
                         <AnimatePresence  mode="wait">
                             <motion.div
@@ -77,8 +78,9 @@ const Process=()=>{
                                  whileTap={{scale:0.95}}
                                  transition={{duration:0.4}}
                                  className="w-28 h-28 flex items-center justify-center rounded-full 
-                                 bg-gradient-to-r from-[#C0B7E8] to-[#8176AF] mb-4 cursor-pointer relative">
-                                    <span className="text-[#343045] text-4xl font-bold "
+                                 bg-gradient-to-r from-[#C0B7E8] to-[#8176AF] mb-4 cursor-pointer relative
+                                 outline outline-[8px] outline-[#0D0D0D66]">
+                                    <span className="text-[#343045] text-4xl font-bold  "
                                     >{steps[numberSlide].number}</span>
                                 </motion.div>
                                 <motion.h5
@@ -92,13 +94,15 @@ const Process=()=>{
                         </AnimatePresence>
                         <button
                             onClick={handleNext}
-                            className="absolute mt-15 mx-5 right-8  mx-4 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full
-                            bg-gradient-to-r from-[#8176AF] to-[#C0B7E8] flex items-center justify-center cursor-pointer">
-                                <span className="text-5xl mb-4">&#8250;</span>
+                            className="absolute mt-15 mx-5 right-8  mx-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full
+                            bg-gradient-to-r from-[#8176AF] to-[#C0B7E8] flex items-center justify-center cursor-pointer
+                            outline outline-[8px] outline-[#0D0D0D66]">
+                                <span className="text-5xl mb-2
+                                 text-[#343045]">&#8250;</span>
                         </button>
                     </div>
                 </div>
-                <div className="hidden md:flex justify-between mt-10">
+                <div className="hidden md:flex justify-between mt-15 ">
                     {steps.map((item,id)=>(
                         <motion.div key={id}
                          initial={{opacity:0,y:50}}
@@ -106,14 +110,15 @@ const Process=()=>{
                          viewport={{once:true,amount:0.5}}
                          transition={{duration:0.6,delay:id*0.3}}
                          whileHover={{y:-5}}
-                         className="flex flex-col items-center">
+                         className="flex flex-col items-center ">
                             <motion.div 
                              whileHover={{scale:1.1,rotate:3,boxShadow:"0 0 10px 5px #8176AF" }}
                              whiletap={{scale:0.95}}
                              transition={{duration:0.5}}
                              className="w-24 h-24 flex items-center justify-center rounded-full
-                             bg-gradient-to-r from-[#C0B7E8] to-[#8176AF] mb-4 cursor-pointer"> 
-                                <span className="text-[#343045] text-4xl font-bold">
+                             bg-gradient-to-r from-[#C0B7E8] to-[#8176AF] mb-4 cursor-pointer
+                             outline outline-[8px] outline-[#0D0D0D66]"> 
+                                <span className="text-[#343045] text-4xl font-bold ">
                                     {item.number}
                                 </span>
                             </motion.div>

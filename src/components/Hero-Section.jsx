@@ -130,7 +130,7 @@ const Hero=()=>{
                             <motion.button
                                whileHover={{boxShadow:"0 0 15px #8176af"}} 
                                transition={{duration:1.4}}
-                             className=" px-18 py-4 bg-gradient-to-r from-[#8176AF] to-[#C0B7E8]
+                               className=" px-18 py-4 bg-gradient-to-r from-[#8176AF] to-[#C0B7E8]
                                 rounded-full font-bold text-[#343045] text-xs
                                 md:px-10 py-3 bg-gradient-to-r from-[#8176AF] to-[#C0B7E8]
                                 rounded-full font-bold text-[#343045] text-xs">
@@ -147,12 +147,14 @@ const Hero=()=>{
                       initial={{scale:0.8,opacity:0}}
                       animate={{scale:1,opacity:1}}
                       transition={{type:"spring",stiffness:100,damping:20}}
-                      className="ml-5 mb-10 md:ml-5">
+                      className="ml-5 mb-10 md:ml-5
+                      ">
                         <motion.img 
                         src={vr} alt="Vr-img" 
                         className="w-full h-auto max-w-sm md:max-w-xl 
                         rounded-tl-[100px] rounded-tr-[100px] 
-                        rounded-br-[100px] rounded-bl-[240px]"
+                        rounded-br-[100px] rounded-bl-[240px] 
+                        outline outline-[10px] outline-[#0D0D0D66]"
                         animate={{y:[0,-50,0]}}
                         transition={{repeat:Infinity,duration:4,ease:"easeInOut"}}
                         />

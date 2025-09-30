@@ -92,13 +92,14 @@ const Service =()=>{
                                  whileInView={{opacity:1,x:0,scale:1}}
                                  exit={{opacity:0,x:-100,scale:0.9}}
                                  transition={{duration:0.8}}
-                                 whileHover={{scale:1.05}}
+                                 whileHover={{scale:1.05,boxShadow:"0px 0px 15px #8176AF"}}
                                   className="w-11/12 bg-[radial-gradient(#433D60,#211E2E)] text-center p-6 rounded-4xl space-y-4">
                                     <motion.img 
                                     src={Services[currentSlide].icon}
                                     alt={Services[currentSlide].title}
                                     whileHover={{scale:1.05}}
-                                    className="w-52 h-52 rounded-full mx-auto object-contain"/>
+                                    className="w-48 h-48 rounded-full mx-auto object-contain
+                                     outline outline-[8px] outline-[#0D0D0D66]"/>
                                     <motion.h3 
                                      whileHover={{scale:1.03}}
                                     className="font-bold text-sm text-[#ffffff] py-5 
@@ -109,7 +110,7 @@ const Service =()=>{
                                         {Services[currentSlide].description}
                                     </motion.p>
                                     <motion.button 
-                                     whileHover={{scale:1.05,boxshadow:"0px 0px 15px #8176AF"}}
+                                     whileHover={{scale:1.05,boxShadow:"0px 0px 15px #8176AF"}}
                                      transition={{duration:0.5}}
                                      className="mt-4 bg-gradient-to-r from-[#8176AF] to-[#C0B7E8]
                                      rounded-full px-10 py-3 text-[#343045] text-base font-bold">
@@ -121,14 +122,16 @@ const Service =()=>{
                              onClick={handlePrev}
                             className="absolute left-1 top-1/2 -translate-y-1/2 
                             bg-gradient-to-r from-[#8176AF] to-[#C0B7E8] p-2
-                            rounded-full w-10 h-10 flex items-center justify-center">
+                            rounded-full w-10 h-10 flex items-center justify-center
+                             outline outline-[8px] outline-[#0D0D0D66]">
                             <span className="text-[#343045] text-6xl mb-3">&#8249;</span>
                             </button>
                             <button
                             onClick={handleNext}
                             className="absolute right-1 top-1/2 -translate-y-1/2 
                              bg-gradient-to-r from-[#8176AF] to-[#C0B7E8]
-                            p-2 rounded-full w-10 h-10 flex items-center justify-center">
+                            p-2 rounded-full w-10 h-10 flex items-center justify-center
+                             outline outline-[8px] outline-[#0D0D0D66]">
                                 <span className="text-[#343045] text-6xl mb-3">&#8250;</span>
                         </button>
                         </div>
@@ -142,16 +145,19 @@ const Service =()=>{
                                   transition={{duration:0.6,delay:i*0.3}}
                                   whileHover={{scale:1.06,boxShadow:"0px 0px 20px #8176AF"}}
                                   className="bg-[radial-gradient(#433D60,#211E2E)] text-center p-6
-                                  space-y-4 rounded-4xl flex-1 min-w-[250px] max-w-[300px]">
+                                  space-y-4 rounded-4xl flex-1 min-w-[250px] max-w-[300px]
+                                  ">
                                     <motion.img 
                                     src={item.icon}
                                     alt={item.title}
                                     whileHover={{scale:1.05,rotate:1}}
-                                    className="w-full h-40 rounded-full mx-auto object-contain"/>
+                                    className="w-40 h-40 rounded-full mx-auto object-contain
+                                    outline outline-[8px] outline-[#0D0D0D66]
+                                    "/>
                                     <motion.h3 
                                      whileHover={{scale:1.02}}
                                     className="font-bold text-2xl text-[#ffffff] 
-                                    py-4 border-b border-[#ffffff] mx-10">
+                                    py-4 border-b border-[#ffffff] mx-10 ">
                                         {item.title}
                                     </motion.h3>
                                     <motion.p className="text-[#ffffff] text-base">
