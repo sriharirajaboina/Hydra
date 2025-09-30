@@ -79,7 +79,7 @@ const Hero=()=>{
                     CONTACT US
                 </motion.button>
                 <motion.button 
-                 whileHover={{scale:1.1,boxshadow:"0px 0px 15px #8176af"}}
+                 whileHover={{scale:1.1,boxShadow:"0px 0px 15px #8176af"}}
                  className="px-6 py-3 rounded-full text-black"
                  style={{ background: 'linear-gradient(to right, #8176AF, #C0B7E8)' }}>
                     JOIN HYDRA
@@ -125,19 +125,22 @@ const Hero=()=>{
                           initial={{opacity:0,x:-60}}
                           whileInView={{opacity:1,x:0}}
                           transition={{duration:1.4}}
-                          whileHover={{scale:1.1}}
+                          whileHover={{scale:1.02}}
                           className="mt-10 flex items-center">
-                            <button className=" px-18 py-4 bg-gradient-to-r from-[#8176AF] to-[#C0B7E8]
+                            <motion.button
+                               whileHover={{boxShadow:"0 0 15px #8176af"}} 
+                               transition={{duration:1.4}}
+                             className=" px-18 py-4 bg-gradient-to-r from-[#8176AF] to-[#C0B7E8]
                                 rounded-full font-bold text-[#343045] text-xs
                                 md:px-10 py-3 bg-gradient-to-r from-[#8176AF] to-[#C0B7E8]
                                 rounded-full font-bold text-[#343045] text-xs">
                                 BUILD YOUR WORLD
-                            </button>
+                            </motion.button>
                             <motion.img 
                              src={arrow} alt="arrow" 
                              className="hidden md:flex ml-6 w-11 h-8"
-                             animate={{x:[0,10,0]}}
-                             transition={{repeat:Infinity,duration:2}}/>
+                             animate={{x:[0,15,0]}}
+                             transition={{repeat:Infinity,duration:3}}/>
                         </motion.div>
                     </motion.div>
                     <motion.div 
@@ -209,13 +212,17 @@ const Hero=()=>{
                               whileInView={{opacity:1,y:0}}
                               transition={{type:"tween",delay:id*0.3,duration:0.8}}
                               viewport={{once:true,amount:0.5}}
-                              className="flex items-center space-x-6 p-4">
+                              className="relative flex items-center space-x-6 p-4">
+                        
                                 <img src={item.icon} alt="icon-des"
                                 className="w-12 h-12"/>
                                 <div>
                                     <h3 className="font-bold text-lg">{item.title}</h3>
                                     <p className="lg:text-sm xl:text-base font-[300]" >{item.description}</p>
                                 </div>
+                                <div className="absolute right-0 top-0 h-full w-[2px] 
+                                bg-gradient-to-b from-[#343045] via-[#C0B7E8] via-[#8176AF] to-[#343045]" />
+
                             </motion.div>
                         ))}
                     </div>

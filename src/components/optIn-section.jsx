@@ -9,7 +9,7 @@ const OptIn=()=>{
               initial={{opacity:0,scale:0.8}}
               whileInView={{opacity:1,scale:1}}
               transition={{duration:0.8,ease:"easeOut"}}
-              viewport={{once:true,amount:0.5}}
+              viewport={{once:true,amount:0.3}}
               className="bg-[radial-gradient(circle,#403A5F,#211E2E)]
                 shadow-[0_4px,10px_#00000040] p-10 rounded-[100px]">
                 <motion.div 

@@ -140,7 +140,7 @@ const Service =()=>{
                                   whileInView={{opacity:1,y:0}}
                                   viewport={{once:true,amount:0.5}}
                                   transition={{duration:0.6,delay:i*0.3}}
-                                  whileHover={{scale:1.06,boxshadow:"0px 0px 20px #8176AF"}}
+                                  whileHover={{scale:1.06,boxShadow:"0px 0px 20px #8176AF"}}
                                   className="bg-[radial-gradient(#433D60,#211E2E)] text-center p-6
                                   space-y-4 rounded-4xl flex-1 min-w-[250px] max-w-[300px]">
                                     <motion.img 
@@ -158,7 +158,7 @@ const Service =()=>{
                                         {item.description}
                                     </motion.p>
                                     <motion.button 
-                                     whileHover={{scale:1.05,boxshadow:"0px 0px 15px #8176AF"}}
+                                     whileHover={{scale:1.05,boxShadow:"0px 0px 15px #8176AF"}}
                                      transition={{duration:0.5}}
                                      className="mt-4 bg-gradient-to-r from-[#8176AF] to-[#C0B7E8]
                                      rounded-full px-8 py-3 text-[#343045] text-xs font-bold">

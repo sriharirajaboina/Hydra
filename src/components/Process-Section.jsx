@@ -73,11 +73,12 @@ const Process=()=>{
                              transition={{duration:0.6}}
                              className="p-6 text-center flex flex-col items-center">
                                 <motion.div 
-                                 whileHover={{scale:1.1,rotate:5}}
+                                 whileHover={{scale:1.1,rotate:3,boxShadow: "0 0 20px 5px #8176AF"}}
+                                 whileTap={{scale:0.95}}
                                  transition={{duration:0.4}}
                                  className="w-28 h-28 flex items-center justify-center rounded-full 
-                                 bg-gradient-to-r from-[#C0B7E8] to-[#8176AF] mb-4">
-                                    <span className="text-[#343045] text-4xl font-bold"
+                                 bg-gradient-to-r from-[#C0B7E8] to-[#8176AF] mb-4 cursor-pointer relative">
+                                    <span className="text-[#343045] text-4xl font-bold "
                                     >{steps[numberSlide].number}</span>
                                 </motion.div>
                                 <motion.h5
@@ -104,18 +105,21 @@ const Process=()=>{
                          whileInView={{opacity:1,y:0}}
                          viewport={{once:true,amount:0.5}}
                          transition={{duration:0.6,delay:id*0.3}}
-                         whilehover={{y:-5}}
+                         whileHover={{y:-5}}
                          className="flex flex-col items-center">
                             <motion.div 
-                             whilehover={{scale:1.1,rotate:5}}
+                             whileHover={{scale:1.1,rotate:3,boxShadow:"0 0 10px 5px #8176AF" }}
+                             whiletap={{scale:0.95}}
                              transition={{duration:0.5}}
                              className="w-24 h-24 flex items-center justify-center rounded-full
-                             bg-gradient-to-r from-[#C0B7E8] to-[#8176AF] mb-4"> 
-                            <span className="text-[#343045] text-4xl font-bold">{item.number}</span>
+                             bg-gradient-to-r from-[#C0B7E8] to-[#8176AF] mb-4 cursor-pointer"> 
+                                <span className="text-[#343045] text-4xl font-bold">
+                                    {item.number}
+                                </span>
                             </motion.div>
                             <motion.h5 
                              whileHover={{y:-5}}
-                             transitio={{duration:0.5}}
+                             transition={{duration:0.5}}
                               className="text-[#ffffff] font-bold text-center"
                                 >{item.title}
                             </motion.h5>

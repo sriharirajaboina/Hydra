@@ -9,7 +9,7 @@ const About=()=>{
                   initial={{opacity:0,y:50}}
                   whileInView={{opacity:1,y:0}}
                   transition={{duration:0.8}}
-                  viewport={{once:true,amount:0.7}}
+                  viewport={{once:true,amount:0.5}}
                   className="flex flex-col md:flex-row items-center md:items-star 
                   justify-between text-center md:text-left">
                     <motion.div className="flex flex-col md:flex-row items-center md:items-center">
@@ -57,7 +57,7 @@ const About=()=>{
                     <motion.div
                       initial={{opacity:0,scale:0.8}}
                       whileInView={{opacity:1,scale:1}}
-                      viewport={{once:true,amount:0.7}}
+                      viewport={{once:true,amount:0.5}}
                       transition={{duration:0.8}}
                       whileHover={{scale:1.1,rotate:5}} 
                       className="mb-10 md:mb-0">
@@ -68,14 +68,14 @@ const About=()=>{
                     <motion.div 
                       initial={{opacity:0,x:-50}}
                       whileInView={{opacity:1,x:0}}
-                      viewport={{once:true,amount:0.7}}
+                      viewport={{once:true,amount:0.5}}
                       trnasition={{type:"tween",delay:0.6,transition:0.8}}
                       className="w-full md:w-[43%] md:text-left md:ml-10 ">
                         <h2 className="md:mb-8">
                             <motion.span 
                             initial={{opacity:0,x:50}}
                             whileInView={{opacity:1,x:0}}
-                            viewport={{once:true,amount:0.7}}
+                            viewport={{once:true,amount:0.5}}
                             trnasition={{delay:0.2,transition:0.8}}
                              className="hidden md:flex font-bold text-[#ffffff] text-4xl">
                                 ABOUT
@@ -93,7 +93,7 @@ const About=()=>{
                         <motion.p 
                          initial={{opacity:0,x:-50}}
                           whileInView={{opacity:1,x:0}}
-                          viewport={{once:true,amount:0.7}}
+                          viewport={{once:true,amount:0.5}}
                           transition={{delay:0.4,transition:0.8}}
                           className="text-[#ffffff] text-base ">Eget mi proin sed libero enim sed faucibus turpis. Nisl rhoncus mattis rhoncus 
                             urna neque viverra justo. Vivamus at augue eget arcu dictum. Ultrices gravida 
@@ -109,7 +109,7 @@ const About=()=>{
                             <motion.button
                              initial={{opacity:0,y:-50}}
                              whileInView={{opacity:1,y:0}}
-                              whileHover={{scale:1.1,boxshadow:"0px 0px 15px #8176af"}}
+                              whileHover={{scale:1.1,boxShadow:"0px 0px 15px #8176af"}}
                               transition={{duration:0.3}} 
                               className="mt-10 font-bold px-8 py-3 bg-gradient-to-r from-[#8176AF] to-[#C0B7E8] rounded-full">
                                 LET"S GET IN TOUCH
