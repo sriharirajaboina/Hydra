@@ -15,9 +15,9 @@ const Footer=()=>{
             <div className="mt-10 mx-21 md:mt-20">
                 <div className="relative flex flex-col  md:flex-row justify-between py-10 flex-wrap mb-5 md:space-y-15 lg:space-y-0 ">
                     <img src={curve1}
-                      className="absolute bottom-1/2 -translate-y-1/9"/>
+                      className="hidden md:block absolute bottom-1/2 -translate-y-1/9"/>
                     <img src={curve2}
-                      className="absolute bottom-1/2 translate-y-1/2"/>
+                      className="hidden md:block absolute bottom-1/2 translate-y-1/2"/>
                     <motion.div 
                      initial={{opacity:0,y:40}}
                      whileInView={{opacity:1,y:0}}

@@ -105,7 +105,7 @@ const Hero=()=>{
                         <img
                             src={curve1}
                             alt="curve background"
-                            className="w-[250px] h-[250px] md:w-[200px] md:h-[600px]
+                            className="hidden md:block w-[200px] md:h-[600px]
                             absolute -z-10 top-1 left-1 -translate-x-1/2 -translate-y-1/4 opacity-80"
                         />
                         <motion.div 
@@ -159,18 +159,18 @@ const Hero=()=>{
                         <img
                             src={curveLeft}
                             alt="curve left"
-                            className="absolute left-[50px] top-1/2 -translate-y-1/2 opacity-80 w-[250px] h-[450px] md:w-[350px] h-[750px] "
+                            className=" absolute left-[50px] top-1/2 -translate-y-1/2 opacity-80  w-[200px]  md:w-[350px] h-[750px] "
                         />
                         <img
                             src={curveRight}
                             alt="curve right"
-                            className="absolute right-[-60px] top-1/2 -translate-y-1/2 opacity-80 w-[250px] h-[450px] md:w-[350px] h-[750px]"
+                            className=" absolute right-[-60px] top-1/2 -translate-y-1/2 opacity-80  w-[200px]  md:w-[350px] h-[750px]"
                         />
                         <img
                             src={curveCenter}
                             alt="curve center"
-                           className="absolute top-1/2 -translate-x-1/3 translate-x-1/3-translate-y-1 
-                                        opacity-80 w-[250px] h-[450px] md:w-[350px] h-[350px]"
+                           className=" absolute top-1/2 -translate-x-1/3 translate-x-1/3-translate-y-1 
+                                        opacity-80 w-[200px]  md:w-[350px] h-[350px]"
 
                         />
                         <motion.div 

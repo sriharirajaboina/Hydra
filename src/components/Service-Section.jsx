@@ -138,7 +138,7 @@ const Service =()=>{
                         </div>
                         <div className="relative hidden md:flex md:flex-wrap md:justify-between gap-6 mt-8">
                             <img src={curve}
-                             className="absolute top-1 -translate-x-18 translate-y-1/15 -z-10"/>
+                             className="hidden md:block absolute top-1 -translate-x-18 translate-y-1/15 -z-10"/>
                             {Services.map((item,i)=>(
                                 <motion.div
                                   key={i}

@@ -56,9 +56,9 @@ const About=()=>{
                 </motion.div>
                 <div className="relative flex flex-col md:flex-row items-center justify-between mt-20">
                         <img src={curve1}
-                          className="absolute top-1/3 left-1 -translate-y-1/2 -z-10"/>
+                          className="hidden md:block absolute top-1/3 left-1 -translate-y-1/2 -z-10"/>
                         <img src={curve2}
-                          className="absolute top-1/3 right-1 translate-y-1/2 -z-10"/>
+                          className="hidden md:block absolute top-1/3 right-1 translate-y-1/2 -z-10"/>
                         <motion.div
                         initial={{opacity:0,scale:0.8}}
                         whileInView={{opacity:1,scale:1}}
