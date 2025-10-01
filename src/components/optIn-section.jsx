@@ -77,8 +77,8 @@ const OptIn=()=>{
                          whileHover={{scale:1.1,background:"linear-gradient(90deg,#c0b7e8 0%,#8176af 100%"}}
                          whileTap={{scale:1}}
                          transition={{duration:0.5}}
-                         className="mt-10 px-8 py-3 bg-gradient-to-r from-[#8176AF] to-[#C0B7E8] 
-                         rounded-full text-[#343045] font-bold mb-10"
+                         className="mt-10 px-4 py-3 bg-gradient-to-r from-[#8176AF] to-[#C0B7E8] 
+                         rounded-full text-[#343045] font-bold mb-10 text-sm sm:px-8 sm:text-base"
                         >SEND TO HYDRA
                     </motion.button>
                     </div>

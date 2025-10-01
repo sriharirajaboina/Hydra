@@ -114,12 +114,12 @@ const Hero=()=>{
                             initial={{opacity:0,x:-60}}
                             whileInView={{opacity:1,x:0}}
                             transition={{duration:0.6}}
-                            className="text-[30px] font-bold mb-6 
-                                text-[#ffffff] md:text-[40px]">
-                            <span className="text-3xl bg-gradient-to-r from-[#8176AF] to-[#C0B7E8] 
+                            className="text-[20px] font-bold mb-6 
+                                text-[#ffffff] sm:text-[30px] md:text-[40px]">
+                            <span className="text-2xl bg-gradient-to-r from-[#8176AF] to-[#C0B7E8] 
                             bg-clip-text text-transparent md:text-5xl"
                             >Dive </span> Into The Depths<br/> Of  
-                                <span className="text-3xl bg-gradient-to-r from-[#8176AF] to-[#C0B7E8] 
+                                <span className="text-2xl bg-gradient-to-r from-[#8176AF] to-[#C0B7E8] 
                                 bg-clip-text text-transparent md:text-5xl"> Virtual Reality </span>
                             </motion.h2>
                             <motion.p 
@@ -191,14 +191,15 @@ const Hero=()=>{
                         </motion.div>
                     </div>
                 </div>
-                <div className="mt-20 px-8 py-10 flex items-center justify-between 
-                        bg-[radial-gradient(circle,_#3A3456F2_0%,_#211E2E_95%)] rounded-full">
+                <div className="mt-20 px-8 py-6 flex items-center justify-between 
+                        bg-[radial-gradient(circle,_#3A3456F2_0%,_#211E2E_95%)] 
+                        rounded-full">
                     <motion.div 
                       initial={{opacity:0,scale:0.5}}
                       whileInView={{opacity:1,scale:1}}
                       transition={{duration:0.8}}
                        viewport={{once:true,amount:0.7}}
-                      className="relative md:hidden overflow-hidden">
+                      className="relative flex justify-center items-center  md:hidden overflow-hidden">
                         <div
                          ref={containerRef}
                         className="flex transition-transform duration-500"
@@ -207,30 +208,29 @@ const Hero=()=>{
                             <div key={id}
                             className="flex-shrink-0 w-full flex items-center ml-15">
                                 <img src={item.icon} alt="icon"
-                                className="w-12 h-12"/>
-                                <div className="ml-5 text-[#ffffff]">
-                                    <h3 className="font-bold  text-lg">
+                                className="w-8 h-8 flex justify-center items-center sm:w-12 h-12 "/>
+                                <div className="ml-5 text-[#ffffff] flex flex-col justify-center items-center">
+                                    <h3 className="font-bold  text-sm ">
                                         {item.title}
                                     </h3>
-                                    <p className="w-[60%] text-sm font-[300] sm:w-full">
+                                    <p className="w-[60%] text-sm font-[300] sm:w-full ">
                                         {item.description}
                                     </p>
                                 </div>
-
                             </div>
                         ))}
                         </div>
                         <button
                             onClick={handlePrev}
                             className="absolute left-1 top-1/2 -translate-y-1/2 text-[#ffffff] w-8 h-8
-                            flex items-center justify-center p-2
+                            flex items-center justify-center p-2 mr-5 
                             bg-transparent border-3 border-[#ffffff] rounded-full cursor-pointer ">
                             <span className="text-5xl leading-none mb-3"> ‹</span>
                         </button>
                         <button
                             onClick={handleNext}
                             className="absolute right-1 top-1/2 -translate-y-1/2 w-8 h-8 cursor-pointer
-                            flex items-center justify-center p-2 mx-1 
+                            flex items-center justify-center p-2 ml-15 
                             bg-transparent border-3 border-[#ffffff] text-[#ffffff] rounded-full">
                                <span className="text-5xl mb-3"> ›</span>
                         </button>

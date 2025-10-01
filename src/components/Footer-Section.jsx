@@ -80,7 +80,7 @@ const Footer=()=>{
                           whileHover={{scale:1.1,boxShadow:"0 0 20px #8176af"}}
                           whileTap={{scale:1}}
                           transition={{type:"spring",stiffness:250}}
-                          className="mt-8 px-8 py-4 bg-gradient-to-r from-[#8176AF] to-[#C0B7E8]
+                          className="mt-8 px-2 py-3 bg-gradient-to-r from-[#8176AF] to-[#C0B7E8]
                           rounded-full text-[#343045] text-xs font-bold ">
                             BUILD YOUR WORLD
                         </motion.button>
@@ -93,7 +93,8 @@ const Footer=()=>{
                  className="relative">
                     <div className="absolute w-full h-1 
                     bg-gradient-to-r from-[#343045] via-[#C0B7E8] via-[#8176AF] to-[#343045]"></div>
-                    <h3 className="w-[80%] leading-loose tracking-wider text-[#ffffff] text-center py-10 font-bold md:w-full">
+                    <h3 className="w-full leading-loose tracking-wider text-[#ffffff] text-center 
+                    py-10 font-bold md:w-full text-xs sm:text-base">
                         2023 © HYDRA LANDING PAGE - BY ZINE. E. FALOUTI - ALL RIGHTS RESERVED 
                     </h3>
                 </motion.div>

@@ -42,7 +42,7 @@ const Tech=()=>{
                      initial={{opacity:0,y:30}}
                      whileInView={{opacity:1,y:0}}
                      transition={{duration:0.8,delay:1.2}}
-                     className="mb-18 text-[#ffffff] text-xl sm:text-2xl 
+                     className="mb-18 text-[#ffffff] text-sm sm:text-2xl 
                     md:text-3xl mt-15 md:mb-15 lg:mb-10">
                     <span className="font-bold ">
                         TECHNOLOGIES & HARDWARE </span> <br/>
@@ -52,7 +52,7 @@ const Tech=()=>{
                      whileHover={{scale:1.2,rotate:10}}
                      transition={{type:"spring",stiffness:300}}
                      className="absolute left-1/2 bottom-0 transform -translate-x-1/2 
-                     translate-y-1/2 w-9 h-9 flex items-center justify-center
+                     translate-y-1/2 w-6 h-6 flex items-center justify-center
                      bg-gradient-to-r from -[#8176AF] to-[#C0B7E8] rounded-full 
                      mt-6  outline outline-[8px] outline-[#0D0D0D66] md:w-12 md:h-12 ">
                          <img src={arrow} alt="techarrow" className="w-8 h-8"/>

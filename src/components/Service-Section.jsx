@@ -7,7 +7,6 @@ import self from "../assets/Service/self.png"
 import outdoor from "../assets/Service/outdoor.png"
 const Service =()=>{
     const [currentSlide,setCurrentSlide]=useState(0);
-    // const serviceRef=useRef(null);
 
     const Services=[
         {
@@ -58,7 +57,7 @@ const Service =()=>{
                               whileInView={{opacity:1,x:0}}
                               viewport={{once:true,amount:0.5}}
                               transition={{duration:0.8}}
-                              className="text-[#ffffff] text-4xl text-center md:text-left">
+                              className="text-[#ffffff] text-3xl sm:text-4xl text-center md:text-left">
                                 <span className="font-bold">WHY BUILD</span> <br/>
                                 <span className="font-light font-[300]">WITH HYDRA</span>
                             </motion.h2>
@@ -99,7 +98,7 @@ const Service =()=>{
                                     src={Services[currentSlide].icon}
                                     alt={Services[currentSlide].title}
                                     whileHover={{scale:1.05}}
-                                    className="w-48 h-48 rounded-full mx-auto object-contain
+                                    className="w-40 h-40 rounded-full mx-auto object-contain
                                      outline outline-[8px] outline-[#0D0D0D66]"/>
                                     <motion.h3 
                                      whileHover={{scale:1.03}}
@@ -114,7 +113,7 @@ const Service =()=>{
                                      whileHover={{scale:1.05,boxShadow:"0px 0px 15px #8176AF"}}
                                      transition={{duration:0.5}}
                                      className="mt-4 bg-gradient-to-r from-[#8176AF] to-[#C0B7E8]
-                                     rounded-full px-10 py-3 text-[#343045] text-base font-bold">
+                                     rounded-full px-6 py-3 text-[#343045] text-sm font-bold sm:px-10 sm:text-base">
                                         {Services[currentSlide].button}
                                     </motion.button>
                                 </motion.div>
