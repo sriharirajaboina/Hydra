@@ -1,5 +1,7 @@
 import React from "react"
 import {motion} from "framer-motion"
+import curve1 from "../assets/Footer/curve1.png"
+import curve2 from "../assets/Footer/curve2.png"
 import logo from "../assets/Hero/logo.png"
 import twitter from "../assets/Footer/twitter.png"
 import youtube from "../assets/Footer/youtube.png"
@@ -11,7 +13,11 @@ const Footer=()=>{
     return(
         <>
             <div className="mt-10 mx-21 md:mt-20">
-                <div className="flex flex-col  md:flex-row justify-between py-10 flex-wrap mb-5 md:space-y-15 lg:space-y-0 ">
+                <div className="relative flex flex-col  md:flex-row justify-between py-10 flex-wrap mb-5 md:space-y-15 lg:space-y-0 ">
+                    <img src={curve1}
+                      className="absolute bottom-1/2 -translate-y-1/9"/>
+                    <img src={curve2}
+                      className="absolute bottom-1/2 translate-y-1/2"/>
                     <motion.div 
                      initial={{opacity:0,y:40}}
                      whileInView={{opacity:1,y:0}}

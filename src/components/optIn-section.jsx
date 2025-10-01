@@ -26,37 +26,37 @@ const OptIn=()=>{
                  whileInView={{opacity:1,y:0}}
                  transition={{duration:0.8,delay:0.2}}
                  viewport={{once:true,amount:0.5}}
-                 className="mt-15">
+                 className="mt-15 px-5 md:px-18">
                     <div className="flex flex-col md:flex-row items-center justify-between gap-8">
                          <motion.input
                           whileFocus={{scale:1.05,boxShadow:"0 0 15px #8176af"}}
                             type="text"
                             placeholder="First Name"
                             required
-                            className="w-full p-3 border border-[#ffffff] rounded-full bg-transparent placeholder:text-left outline-none"
+                            className="w-full p-3 border-2 border-[#ffffff] rounded-full bg-transparent placeholder:text-left outline-none"
                         />
                         <motion.input
                           whileFocus={{scale:1.05,boxShadow:"0 0 15px #8176af"}}
                             type="text"
                             placeholder="Last Name"
                             required
-                            className="w-full p-3 border border-[#ffffff] rounded-full bg-transparent placeholder:text-left outline-none"
+                            className="w-full p-3 border-2 border-[#ffffff] rounded-full bg-transparent placeholder:text-left outline-none"
                         />
                     </div>
-                    <div className="mt-4 flex flex-col md:flex-row items-center gap-8">
+                    <div className="mt-8 flex flex-col md:flex-row items-center gap-8">
                          <motion.input
                           whileFocus={{scale:1.05,boxShadow:"0 0 15px #8176af"}}
                             type="email"
                             placeholder="Email"
                             required
-                            className="w-full p-3 border border-[#ffffff] rounded-full bg-transparent placeholder:text-left outline-none"
+                            className="w-full p-3 border-2 border-[#ffffff] rounded-full bg-transparent placeholder:text-left outline-none"
                         />
                         <motion.input
                           whileFocus={{scale:1.05,boxShadow:"0 0 15px #8176af"}}
                             type="tel"
                             placeholder="phone Number"
                             required
-                            className="w-full p-3 border border-[#ffffff] rounded-full bg-transparent placeholder:text-left outline-none"
+                            className="w-full p-3 border-2 border-[#ffffff] rounded-full bg-transparent placeholder:text-left outline-none"
                         />
                     </div>
                         <motion.input
@@ -64,13 +64,13 @@ const OptIn=()=>{
                             type="text"
                             placeholder="Subject"
                             required
-                            className="w-full p-3 border border-[#ffffff] rounded-full bg-transparent placeholder:text-left outline-none mt-4"
+                            className="mt-8 w-full p-3 border-2 border-[#ffffff] rounded-full bg-transparent placeholder:text-left outline-none mt-4"
                         />
                     <motion.textarea
                       whileFocus={{scale:1.05,boxShadow:"0 0 15px #8176af"}}
                         placeholder="Tell Us Something"
                         required
-                        className="w-full p-3 border border-[#ffffff] rounded-xl bg-transparent placeholder:text-left outline-none mt-4 min-h-[120px]"
+                        className="mt-8 w-full p-3 border-2 border-[#ffffff] rounded-xl bg-transparent placeholder:text-left outline-none mt-4 min-h-[120px]"
                     ></motion.textarea>
                      <div className="text-center">
                         <motion.button 
@@ -78,7 +78,7 @@ const OptIn=()=>{
                          whileTap={{scale:1}}
                          transition={{duration:0.5}}
                          className="mt-10 px-8 py-3 bg-gradient-to-r from-[#8176AF] to-[#C0B7E8] 
-                         rounded-full text-[#343045] font-bold"
+                         rounded-full text-[#343045] font-bold mb-10"
                         >SEND TO HYDRA
                     </motion.button>
                     </div>

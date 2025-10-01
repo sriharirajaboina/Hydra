@@ -27,7 +27,7 @@ const Tech=()=>{
    
     return(
         <>
-        <div className="mt-20 mx-10 md:mx-21">
+        <div className="relative mt-20 mx-10 md:mx-21">
             <div className="relative w-full max-w-base sm:max-w-base
             md:max-w-4xl lg:max-w-6xl xl:max-w-7xl max-auto">
                 <motion.img 

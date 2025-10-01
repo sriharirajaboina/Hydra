@@ -1,5 +1,6 @@
 import React,{useState,useRef}from "react"
 import {motion,AnimatePresence} from "framer-motion"
+import curve from "../assets/Service/curve.png"
 import simulation from "../assets/Service/simulation.png"
 import education from "../assets/Service/education.png"
 import self from "../assets/Service/self.png"
@@ -135,7 +136,9 @@ const Service =()=>{
                                 <span className="text-[#343045] text-6xl mb-3">&#8250;</span>
                         </button>
                         </div>
-                        <div className="hidden md:flex md:flex-wrap md:justify-between gap-6 mt-8">
+                        <div className="relative hidden md:flex md:flex-wrap md:justify-between gap-6 mt-8">
+                            <img src={curve}
+                             className="absolute top-1 -translate-x-18 translate-y-1/15 -z-10"/>
                             {Services.map((item,i)=>(
                                 <motion.div
                                   key={i}

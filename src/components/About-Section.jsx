@@ -1,5 +1,7 @@
 import React from "react"
 import {motion} from "framer-motion"
+import curve1 from "../assets/About/curve1.png"
+import curve2 from "../assets/About/curve2.png"
 import hydravr from "../assets/About/hydraVr.png"
 const About=()=>{
     return (
@@ -38,7 +40,6 @@ const About=()=>{
                         </motion.span>
                     </motion.div>
                     <motion.div
-                      
                       className="hidden md:flex w-[43%]  md:ml-5">
                         <motion.p 
                          initial={{opacity:0,y:30}} 
@@ -53,69 +54,74 @@ const About=()=>{
                         </motion.p>
                     </motion.div>  
                 </motion.div>
-                <div className="flex flex-col md:flex-row items-center justify-between mt-20">
-                    <motion.div
-                      initial={{opacity:0,scale:0.8}}
-                      whileInView={{opacity:1,scale:1}}
-                      viewport={{once:true,amount:0.5}}
-                      transition={{duration:0.8}}
-                      whileHover={{scale:1.1,rotate:5}} 
-                      className="mb-10 md:mb-0">
-                        <img src={hydravr} alt="hydrave" className="w-full h-auto 
-                        max-w-sm md:max-w-lg rounded-tl-[240px] rounded-tr-[100px]
-                        rounded-br-[240px] rounded-bl-[100px]"/>
-                    </motion.div>
-                    <motion.div 
-                      initial={{opacity:0,x:-50}}
-                      whileInView={{opacity:1,x:0}}
-                      viewport={{once:true,amount:0.5}}
-                      trnasition={{type:"tween",delay:0.6,transition:0.8}}
-                      className="w-full md:w-[43%] md:text-left md:ml-10 ">
-                        <h2 className="md:mb-8">
-                            <motion.span 
-                            initial={{opacity:0,x:50}}
+                <div className="relative flex flex-col md:flex-row items-center justify-between mt-20">
+                        <img src={curve1}
+                          className="absolute top-1/3 left-1 -translate-y-1/2 -z-10"/>
+                        <img src={curve2}
+                          className="absolute top-1/3 right-1 translate-y-1/2 -z-10"/>
+                        <motion.div
+                        initial={{opacity:0,scale:0.8}}
+                        whileInView={{opacity:1,scale:1}}
+                        viewport={{once:true,amount:0.5}}
+                        transition={{duration:0.8}}
+                        whileHover={{scale:1.1,rotate:5}} 
+                        className=" relative mb-10 md:mb-0">
+                            <img src={hydravr} alt="hydrave" className="w-full h-auto 
+                            max-w-sm md:max-w-lg rounded-tl-[240px] rounded-tr-[100px]
+                            rounded-br-[240px] rounded-bl-[100px]"/>
+                        </motion.div>
+                        <motion.div 
+                        initial={{opacity:0,x:-50}}
+                        whileInView={{opacity:1,x:0}}
+                        viewport={{once:true,amount:0.5}}
+                        trnasition={{type:"tween",delay:0.6,transition:0.8}}
+                        className="w-full md:w-[43%] md:text-left md:ml-10 ">
+                            <h2 className="md:mb-8">
+                                <motion.span 
+                                initial={{opacity:0,x:50}}
+                                whileInView={{opacity:1,x:0}}
+                                viewport={{once:true,amount:0.5}}
+                                trnasition={{delay:0.2,transition:0.8}}
+                                className="hidden md:flex font-bold text-[#ffffff] text-4xl">
+                                    ABOUT
+                                </motion.span>
+                                <br/>
+                                <motion.span 
+                                    initial={{opacity:0,x:-50}}
+                                    whileInView={{opacity:1,x:0}}
+                                    viewport={{once:true,amount:0.7}}
+                                    trnasition={{delay:0.6,transition:0.8}}
+                                className="hidden md:flex font-light text-[#ffffff] text-4xl font-[300]">
+                                    HYDRA VR
+                                </motion.span>
+                            </h2>
+                            <motion.p 
+                            initial={{opacity:0,x:-50}}
                             whileInView={{opacity:1,x:0}}
                             viewport={{once:true,amount:0.5}}
-                            trnasition={{delay:0.2,transition:0.8}}
-                             className="hidden md:flex font-bold text-[#ffffff] text-4xl">
-                                ABOUT
-                            </motion.span>
-                            <br/>
-                            <motion.span 
-                                initial={{opacity:0,x:-50}}
-                                whileInView={{opacity:1,x:0}}
-                                viewport={{once:true,amount:0.7}}
-                                trnasition={{delay:0.6,transition:0.8}}
-                               className="hidden md:flex font-light text-[#ffffff] text-4xl font-[300]">
-                                HYDRA VR
-                            </motion.span>
-                        </h2>
-                        <motion.p 
-                         initial={{opacity:0,x:-50}}
-                          whileInView={{opacity:1,x:0}}
-                          viewport={{once:true,amount:0.5}}
-                          transition={{delay:0.4,transition:0.8}}
-                          className="text-[#ffffff] text-base ">Eget mi proin sed libero enim sed faucibus turpis. Nisl rhoncus mattis rhoncus 
-                            urna neque viverra justo. Vivamus at augue eget arcu dictum. Ultrices gravida 
-                            dictum fusce ut placerat orci. Aenean et tortor at risus viverra adipiscing at in. 
-                            Mattis aliquam faucibus purus in massa. Est placerat in egestas erat imperdiet 
-                            sed. Consequat semper viverra nam libero justo laoreet sit amet. Aliquam
-                            etiam erat velit scelerisque in dictum non consectetur a. Laoreet sit amet 
-                            cursus sit amet. Vel eros donec ac odio tempor orci dapibus. Sem nulla phar
-                            etradiam sit amet nisl suscipit adipiscing bibendum. Leo a diam sollicitudi  
-                            n tempor.
-                        </motion.p>
-                        <motion.div className="text-center md:text-left">
-                            <motion.button
-                             initial={{opacity:0,y:-50}}
-                             whileInView={{opacity:1,y:0}}
-                              whileHover={{scale:1.1,boxShadow:"0px 0px 15px #8176af"}}
-                              transition={{duration:0.3}} 
-                              className="mt-10 font-bold px-8 py-3 bg-gradient-to-r from-[#8176AF] to-[#C0B7E8] rounded-full">
-                                LET"S GET IN TOUCH
-                            </motion.button>
+                            transition={{delay:0.4,transition:0.8}}
+                            className="text-[#ffffff] text-base ">Eget mi proin sed libero enim sed faucibus turpis. Nisl rhoncus mattis rhoncus 
+                                urna neque viverra justo. Vivamus at augue eget arcu dictum. Ultrices gravida 
+                                dictum fusce ut placerat orci. Aenean et tortor at risus viverra adipiscing at in. 
+                                Mattis aliquam faucibus purus in massa. Est placerat in egestas erat imperdiet 
+                                sed. Consequat semper viverra nam libero justo laoreet sit amet. Aliquam
+                                etiam erat velit scelerisque in dictum non consectetur a. Laoreet sit amet 
+                                cursus sit amet. Vel eros donec ac odio tempor orci dapibus. Sem nulla phar
+                                etradiam sit amet nisl suscipit adipiscing bibendum. Leo a diam sollicitudi  
+                                n tempor.
+                            </motion.p>
+                            <motion.div className="text-center md:text-left">
+                                <motion.button
+                                initial={{opacity:0,y:-50}}
+                                whileInView={{opacity:1,y:0}}
+                                whileHover={{scale:1.1,boxShadow:"0px 0px 15px #8176af"}}
+                                transition={{duration:0.3}} 
+                                className="mt-10 font-bold px-8 py-3 bg-gradient-to-r from-[#8176AF] to-[#C0B7E8] rounded-full">
+                                    LET"S GET IN TOUCH
+                                </motion.button>
+                            </motion.div>
                         </motion.div>
-                    </motion.div>
+                    
                 </div>
             </div>
         </>

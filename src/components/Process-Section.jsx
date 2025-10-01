@@ -1,6 +1,6 @@
 import React,{useState} from "react"
 import {motion,AnimatePresence} from "framer-motion"
-
+import curve from "../assets/Process/curve.png"
 const Process=()=>{
     const [numberSlide,setNumberSlide]=useState(0);
 
@@ -102,7 +102,9 @@ const Process=()=>{
                         </button>
                     </div>
                 </div>
-                <div className="hidden md:flex justify-between mt-15 ">
+                <div className="relative hidden md:flex justify-between mt-15 ">
+                    <img src={curve} 
+                     className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] h-[100px]  -z-10"/>
                     {steps.map((item,id)=>(
                         <motion.div key={id}
                          initial={{opacity:0,y:50}}
@@ -110,7 +112,7 @@ const Process=()=>{
                          viewport={{once:true,amount:0.5}}
                          transition={{duration:0.6,delay:id*0.3}}
                          whileHover={{y:-5}}
-                         className="flex flex-col items-center ">
+                         className="relative flex flex-col items-center ">
                             <motion.div 
                              whileHover={{scale:1.1,rotate:3,boxShadow:"0 0 10px 5px #8176AF" }}
                              whiletap={{scale:0.95}}

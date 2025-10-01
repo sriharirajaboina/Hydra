@@ -1,5 +1,9 @@
 import React,{useState, useRef} from "react";
 import {motion} from "framer-motion"
+import curve1 from "../assets/Hero/curve1.png"
+import curveLeft from "../assets/Hero/curve-left.png"
+import curveRight from "../assets/Hero/curve-right.png"
+import curveCenter from "../assets/Hero/curve-center.png"
 import logo from "../assets/Hero/logo.png"
 import brand from "../assets/Hero/brand.png"
 import vr from "../assets/Hero/VR.png"
@@ -42,7 +46,7 @@ const Hero=()=>{
         };
     return(
         <>
-        <div className="mt-13 mx-10 lg:mt-13 lg:mx-21">
+        <div className="relative mt-13 mx-10 lg:mt-13 lg:mx-21">
           <motion.nav 
             initial={{y:-50,opacity:0}}
             whileInView={{y:0,opacity:1}}
@@ -97,68 +101,95 @@ const Hero=()=>{
         </div>
             <div className="mt-10 mx-10 lg:mx-21 mt-25">
                 <div className="flex flex-col-reverse md:flex-row items-center justify-between">
-                    <motion.div 
-                     
-                     className=" md:text-4xl">
-                        <motion.h2 
-                          initial={{opacity:0,x:-60}}
-                          whileInView={{opacity:1,x:0}}
-                          transition={{duration:0.6}}
-                          className="text-[30px] font-bold mb-6 
-                            text-[#ffffff] md:text-[40px]">
-                           <span className="text-3xl bg-gradient-to-r from-[#8176AF] to-[#C0B7E8] 
-                           bg-clip-text text-transparent md:text-5xl"
-                           >Dive </span> Into The Depths<br/> Of  
-                            <span className="text-3xl bg-gradient-to-r from-[#8176AF] to-[#C0B7E8] 
-                            bg-clip-text text-transparent md:text-5xl"> Virtual Reality </span>
-                        </motion.h2>
-                        <motion.p 
-                          initial={{opacity:0,x:-60}}
-                          whileInView={{opacity:1,x:0}}
-                          transition={{duration:1}}
-                          className="hidden md:flex text-[#ffffff] md:w-[80%] xl:w-[58%] text-base ">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                            sed do eiusmod tempor incididunt ut labore et dolore 
-                            nisl tincidunt eget. Lectus mauris eros in vitae .
-                        </motion.p>
-                        <motion.div 
-                          initial={{opacity:0,x:-60}}
-                          whileInView={{opacity:1,x:0}}
-                          transition={{duration:1.4}}
-                          whileHover={{scale:1.02}}
-                          className="mt-10 flex items-center">
-                            <motion.button
-                               whileHover={{boxShadow:"0 0 15px #8176af"}} 
-                               transition={{duration:1.4}}
-                               className=" px-18 py-4 bg-gradient-to-r from-[#8176AF] to-[#C0B7E8]
-                                rounded-full font-bold text-[#343045] text-xs
-                                md:px-10 py-3 bg-gradient-to-r from-[#8176AF] to-[#C0B7E8]
-                                rounded-full font-bold text-[#343045] text-xs">
-                                BUILD YOUR WORLD
-                            </motion.button>
-                            <motion.img 
-                             src={arrow} alt="arrow" 
-                             className="hidden md:flex ml-6 w-11 h-8"
-                             animate={{x:[0,15,0]}}
-                             transition={{repeat:Infinity,duration:3}}/>
-                        </motion.div>
-                    </motion.div>
-                    <motion.div 
-                      initial={{scale:0.8,opacity:0}}
-                      animate={{scale:1,opacity:1}}
-                      transition={{type:"spring",stiffness:100,damping:20}}
-                      className="ml-5 mb-10 md:ml-5
-                      ">
-                        <motion.img 
-                        src={vr} alt="Vr-img" 
-                        className="w-full h-auto max-w-sm md:max-w-xl 
-                        rounded-tl-[100px] rounded-tr-[100px] 
-                        rounded-br-[100px] rounded-bl-[240px] 
-                        outline outline-[10px] outline-[#0D0D0D66]"
-                        animate={{y:[0,-50,0]}}
-                        transition={{repeat:Infinity,duration:4,ease:"easeInOut"}}
+                    <div className="relative w-full">
+                        <img
+                            src={curve1}
+                            alt="curve background"
+                            className="w-[250px] h-[250px] md:w-[200px] md:h-[600px]
+                            absolute -z-10 top-1 left-1 -translate-x-1/2 -translate-y-1/4 opacity-80"
                         />
-                    </motion.div>
+                        <motion.div 
+                        className="relative z-10 md:text-4xl">
+                            <motion.h2 
+                            initial={{opacity:0,x:-60}}
+                            whileInView={{opacity:1,x:0}}
+                            transition={{duration:0.6}}
+                            className="text-[30px] font-bold mb-6 
+                                text-[#ffffff] md:text-[40px]">
+                            <span className="text-3xl bg-gradient-to-r from-[#8176AF] to-[#C0B7E8] 
+                            bg-clip-text text-transparent md:text-5xl"
+                            >Dive </span> Into The Depths<br/> Of  
+                                <span className="text-3xl bg-gradient-to-r from-[#8176AF] to-[#C0B7E8] 
+                                bg-clip-text text-transparent md:text-5xl"> Virtual Reality </span>
+                            </motion.h2>
+                            <motion.p 
+                            initial={{opacity:0,x:-60}}
+                            whileInView={{opacity:1,x:0}}
+                            transition={{duration:1}}
+                            className="hidden md:flex text-[#ffffff] md:w-[80%] xl:w-[58%] text-base ">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                                sed do eiusmod tempor incididunt ut labore et dolore 
+                                nisl tincidunt eget. Lectus mauris eros in vitae .
+                            </motion.p>
+                            <motion.div 
+                            initial={{opacity:0,x:-60}}
+                            whileInView={{opacity:1,x:0}}
+                            transition={{duration:1.4}}
+                            whileHover={{scale:1.02}}
+                            className="mt-10 flex items-center">
+                                <motion.button
+                                whileHover={{boxShadow:"0 0 15px #8176af"}} 
+                                transition={{duration:1.4}}
+                                className=" px-18 py-4 bg-gradient-to-r from-[#8176AF] to-[#C0B7E8]
+                                    rounded-full font-bold text-[#343045] text-xs
+                                    md:px-10 py-3 bg-gradient-to-r from-[#8176AF] to-[#C0B7E8]
+                                    rounded-full font-bold text-[#343045] text-xs">
+                                    BUILD YOUR WORLD
+                                </motion.button>
+                                <motion.img 
+                                src={arrow} alt="arrow" 
+                                className="hidden md:flex ml-6 w-11 h-8"
+                                animate={{x:[0,15,0]}}
+                                transition={{repeat:Infinity,duration:3}}/>
+                            </motion.div>
+                        </motion.div>
+                    </div>
+                    <div className="relative flex justify-center items-center ml-5 mb-10 md:ml-5">
+
+                        <img
+                            src={curveLeft}
+                            alt="curve left"
+                            className="absolute left-[50px] top-1/2 -translate-y-1/2 opacity-80 w-[250px] h-[450px] md:w-[350px] h-[750px] "
+                        />
+                        <img
+                            src={curveRight}
+                            alt="curve right"
+                            className="absolute right-[-60px] top-1/2 -translate-y-1/2 opacity-80 w-[250px] h-[450px] md:w-[350px] h-[750px]"
+                        />
+                        <img
+                            src={curveCenter}
+                            alt="curve center"
+                           className="absolute top-1/2 -translate-x-1/3 translate-x-1/3-translate-y-1 
+                                        opacity-80 w-[250px] h-[450px] md:w-[350px] h-[350px]"
+
+                        />
+                        <motion.div 
+                        initial={{scale:0.8,opacity:0}}
+                        animate={{scale:1,opacity:1}}
+                        transition={{type:"spring",stiffness:100,damping:20}}
+                        className="relative 
+                        ">
+                            <motion.img 
+                            src={vr} alt="Vr-img" 
+                            className="w-full h-auto max-w-sm md:max-w-xl 
+                            rounded-tl-[100px] rounded-tr-[100px] 
+                            rounded-br-[100px] rounded-bl-[240px] 
+                            outline outline-[10px] outline-[#0D0D0D66]"
+                            // animate={{y:[0,-50,0]}}
+                            // transition={{repeat:Infinity,duration:4,ease:"easeInOut"}}
+                            />
+                        </motion.div>
+                    </div>
                 </div>
                 <div className="mt-20 px-8 py-10 flex items-center justify-between 
                         bg-[radial-gradient(circle,_#3A3456F2_0%,_#211E2E_95%)] rounded-full">
