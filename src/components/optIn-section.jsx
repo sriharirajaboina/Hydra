@@ -26,7 +26,7 @@ const OptIn=()=>{
                  whileInView={{opacity:1,y:0}}
                  transition={{duration:0.8,delay:0.2}}
                  viewport={{once:true,amount:0.5}}
-                 className="mt-15 px-5 md:px-18">
+                 className="mt-15 px-5 text-[#ffffff] md:px-18">
                     <div className="flex flex-col md:flex-row items-center justify-between gap-8">
                          <motion.input
                           whileFocus={{scale:1.05,boxShadow:"0 0 15px #8176af"}}
